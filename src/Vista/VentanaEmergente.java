@@ -21,7 +21,7 @@ public class VentanaEmergente {
     }
     
     public void ventanaInformativa(String mensaje) {
-         Icon o = new ImageIcon(getClass().getResource("/Vista.Imagenes/jinete.png"));
+         Icon o = new ImageIcon(getClass().getResource("/Vista.Imagenes/Jinete.png"));
         JOptionPane.showMessageDialog(null, mensaje, "Conteo Carreras ", JOptionPane.PLAIN_MESSAGE, o);
     }
 }
