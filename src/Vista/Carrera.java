@@ -15,6 +15,9 @@ public class Carrera extends javax.swing.JFrame {
         setVisible(true);
     }
 
+    //https://www.youtube.com/watch?v=0El2Flipf5k -- SEMAFORO
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,6 +44,10 @@ public class Carrera extends javax.swing.JFrame {
         botonInterrumpir = new javax.swing.JToggleButton();
         botonTerminar = new javax.swing.JToggleButton();
         botonEmpezar1 = new javax.swing.JToggleButton();
+        PanelBaseSemaforo = new javax.swing.JPanel();
+        LuzRoja = new javax.swing.JPanel();
+        LuzAmarilla = new javax.swing.JPanel();
+        LuzVerde = new javax.swing.JPanel();
 
         jLabel1.setText("jLabel1");
 
@@ -121,7 +128,7 @@ public class Carrera extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonInterrumpir);
-        botonInterrumpir.setBounds(350, 330, 150, 23);
+        botonInterrumpir.setBounds(340, 330, 150, 23);
 
         botonTerminar.setBackground(new java.awt.Color(253, 231, 231));
         botonTerminar.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
@@ -141,8 +148,69 @@ public class Carrera extends javax.swing.JFrame {
         botonEmpezar1.setForeground(new java.awt.Color(51, 51, 51));
         botonEmpezar1.setText("Empezar Carrera");
         botonEmpezar1.setBorder(null);
+        botonEmpezar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEmpezar1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(botonEmpezar1);
-        botonEmpezar1.setBounds(160, 330, 150, 23);
+        botonEmpezar1.setBounds(70, 330, 150, 23);
+
+        PanelBaseSemaforo.setBackground(new java.awt.Color(255, 186, 106));
+        PanelBaseSemaforo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 40, true));
+        PanelBaseSemaforo.setForeground(new java.awt.Color(51, 51, 51));
+        PanelBaseSemaforo.setLayout(null);
+
+        LuzRoja.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout LuzRojaLayout = new javax.swing.GroupLayout(LuzRoja);
+        LuzRoja.setLayout(LuzRojaLayout);
+        LuzRojaLayout.setHorizontalGroup(
+            LuzRojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+        LuzRojaLayout.setVerticalGroup(
+            LuzRojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+
+        PanelBaseSemaforo.add(LuzRoja);
+        LuzRoja.setBounds(20, 20, 30, 30);
+
+        LuzAmarilla.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout LuzAmarillaLayout = new javax.swing.GroupLayout(LuzAmarilla);
+        LuzAmarilla.setLayout(LuzAmarillaLayout);
+        LuzAmarillaLayout.setHorizontalGroup(
+            LuzAmarillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+        LuzAmarillaLayout.setVerticalGroup(
+            LuzAmarillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+
+        PanelBaseSemaforo.add(LuzAmarilla);
+        LuzAmarilla.setBounds(20, 60, 30, 30);
+
+        LuzVerde.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout LuzVerdeLayout = new javax.swing.GroupLayout(LuzVerde);
+        LuzVerde.setLayout(LuzVerdeLayout);
+        LuzVerdeLayout.setHorizontalGroup(
+            LuzVerdeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+        LuzVerdeLayout.setVerticalGroup(
+            LuzVerdeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+
+        PanelBaseSemaforo.add(LuzVerde);
+        LuzVerde.setBounds(20, 100, 30, 30);
+
+        jPanel1.add(PanelBaseSemaforo);
+        PanelBaseSemaforo.setBounds(30, 100, 70, 150);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,16 +236,24 @@ public class Carrera extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonTerminarActionPerformed
 
+    private void botonEmpezar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEmpezar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonEmpezar1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Caballo1;
     private javax.swing.JLabel Caballo2;
     private javax.swing.JLabel Caballo3;
+    private javax.swing.JPanel LuzAmarilla;
+    private javax.swing.JPanel LuzRoja;
+    private javax.swing.JPanel LuzVerde;
+    private javax.swing.JPanel PanelBaseSemaforo;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JToggleButton botonEmpezar1;
-    private javax.swing.JToggleButton botonInterrumpir;
-    private javax.swing.JButton botonSalir;
-    private javax.swing.JToggleButton botonTerminar;
+    public javax.swing.JToggleButton botonEmpezar1;
+    public javax.swing.JToggleButton botonInterrumpir;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JToggleButton botonTerminar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
