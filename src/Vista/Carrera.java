@@ -34,11 +34,9 @@ public class Carrera extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Caballo2 = new javax.swing.JLabel();
         Caballo1 = new javax.swing.JLabel();
-        Caballo3 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         botonInterrumpir = new javax.swing.JToggleButton();
@@ -58,17 +56,17 @@ public class Carrera extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(51, 204, 0));
         jPanel1.setLayout(null);
 
-        Titulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        Titulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 28)); // NOI18N
         Titulo.setForeground(new java.awt.Color(204, 0, 0));
         Titulo.setText("Carrera de Caballos");
         jPanel1.add(Titulo);
-        Titulo.setBounds(240, 30, 310, 29);
+        Titulo.setBounds(240, 20, 310, 33);
 
         botonSalir.setBackground(new java.awt.Color(255, 186, 106));
         botonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/salir.png"))); // NOI18N
         botonSalir.setBorder(null);
         jPanel1.add(botonSalir);
-        botonSalir.setBounds(670, 30, 30, 30);
+        botonSalir.setBounds(650, 20, 30, 30);
 
         jPanel2.setBackground(new java.awt.Color(252, 251, 249));
         jPanel2.setLayout(null);
@@ -81,10 +79,6 @@ public class Carrera extends javax.swing.JFrame {
         jPanel2.add(Caballo1);
         Caballo1.setBounds(420, 10, 93, 50);
 
-        Caballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/animal-3629_128.gif"))); // NOI18N
-        jPanel2.add(Caballo3);
-        Caballo3.setBounds(420, 170, 93, 40);
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Meta.png"))); // NOI18N
         jPanel2.add(jLabel3);
         jLabel3.setBounds(40, 0, 40, 220);
@@ -96,12 +90,6 @@ public class Carrera extends javax.swing.JFrame {
         jLabel4.setText("________________________________________________________________________________________");
         jPanel2.add(jLabel4);
         jLabel4.setBounds(80, 60, 460, 16);
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("3");
-        jPanel2.add(jLabel5);
-        jLabel5.setBounds(520, 160, 40, 60);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
@@ -116,7 +104,7 @@ public class Carrera extends javax.swing.JFrame {
         jLabel7.setBounds(520, 90, 40, 60);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(130, 80, 550, 220);
+        jPanel2.setBounds(130, 80, 550, 150);
 
         botonInterrumpir.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         botonInterrumpir.setForeground(new java.awt.Color(51, 51, 51));
@@ -128,7 +116,7 @@ public class Carrera extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonInterrumpir);
-        botonInterrumpir.setBounds(340, 330, 150, 23);
+        botonInterrumpir.setBounds(300, 270, 150, 30);
 
         botonTerminar.setBackground(new java.awt.Color(253, 231, 231));
         botonTerminar.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
@@ -141,7 +129,7 @@ public class Carrera extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonTerminar);
-        botonTerminar.setBounds(530, 330, 150, 23);
+        botonTerminar.setBounds(500, 270, 150, 30);
 
         botonEmpezar1.setBackground(new java.awt.Color(225, 255, 214));
         botonEmpezar1.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
@@ -154,7 +142,7 @@ public class Carrera extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonEmpezar1);
-        botonEmpezar1.setBounds(70, 330, 150, 23);
+        botonEmpezar1.setBounds(100, 270, 150, 30);
 
         PanelBaseSemaforo.setBackground(new java.awt.Color(255, 186, 106));
         PanelBaseSemaforo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 40, true));
@@ -210,7 +198,7 @@ public class Carrera extends javax.swing.JFrame {
         LuzVerde.setBounds(20, 100, 30, 30);
 
         jPanel1.add(PanelBaseSemaforo);
-        PanelBaseSemaforo.setBounds(30, 100, 70, 150);
+        PanelBaseSemaforo.setBounds(30, 80, 70, 150);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -222,7 +210,7 @@ public class Carrera extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
         );
 
         pack();
@@ -244,7 +232,6 @@ public class Carrera extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Caballo1;
     private javax.swing.JLabel Caballo2;
-    private javax.swing.JLabel Caballo3;
     private javax.swing.JPanel LuzAmarilla;
     private javax.swing.JPanel LuzRoja;
     private javax.swing.JPanel LuzVerde;
@@ -258,7 +245,6 @@ public class Carrera extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
