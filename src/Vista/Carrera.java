@@ -1,22 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
-/**
- *
- * @author Personal
- */
+import Control.Control;
+
 public class Carrera extends javax.swing.JFrame {
+
+    private Control control;
 
     /**
      * Creates new form Carrera
      */
-    public Carrera() {
+    public Carrera(Control aThis) {
         initComponents();
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
+    //https://www.youtube.com/watch?v=0El2Flipf5k -- SEMAFORO
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,57 +27,241 @@ public class Carrera extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Titulo = new javax.swing.JLabel();
+        botonSalir = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        Caballo2 = new javax.swing.JLabel();
+        Caballo1 = new javax.swing.JLabel();
+        Caballo3 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        botonInterrumpir = new javax.swing.JToggleButton();
+        botonTerminar = new javax.swing.JToggleButton();
+        botonEmpezar1 = new javax.swing.JToggleButton();
+        PanelBaseSemaforo = new javax.swing.JPanel();
+        LuzRoja = new javax.swing.JPanel();
+        LuzAmarilla = new javax.swing.JPanel();
+        LuzVerde = new javax.swing.JPanel();
+
+        jLabel1.setText("jLabel1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setBackground(new java.awt.Color(255, 186, 106));
+        jPanel1.setForeground(new java.awt.Color(51, 204, 0));
+        jPanel1.setLayout(null);
+
+        Titulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(204, 0, 0));
+        Titulo.setText("Carrera de Caballos");
+        jPanel1.add(Titulo);
+        Titulo.setBounds(240, 30, 310, 29);
+
+        botonSalir.setBackground(new java.awt.Color(255, 186, 106));
+        botonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/salir.png"))); // NOI18N
+        botonSalir.setBorder(null);
+        jPanel1.add(botonSalir);
+        botonSalir.setBounds(670, 30, 30, 30);
+
+        jPanel2.setBackground(new java.awt.Color(252, 251, 249));
+        jPanel2.setLayout(null);
+
+        Caballo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/animal-3629_128.gif"))); // NOI18N
+        jPanel2.add(Caballo2);
+        Caballo2.setBounds(420, 90, 93, 50);
+
+        Caballo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/animal-3629_128.gif"))); // NOI18N
+        jPanel2.add(Caballo1);
+        Caballo1.setBounds(420, 10, 93, 50);
+
+        Caballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/animal-3629_128.gif"))); // NOI18N
+        jPanel2.add(Caballo3);
+        Caballo3.setBounds(420, 170, 93, 40);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Meta.png"))); // NOI18N
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(40, 0, 40, 220);
+
+        jLabel2.setText("________________________________________________________________________________________");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(80, 140, 460, 16);
+
+        jLabel4.setText("________________________________________________________________________________________");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(80, 60, 460, 16);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setText("3");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(520, 160, 40, 60);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setText("1");
+        jPanel2.add(jLabel6);
+        jLabel6.setBounds(520, 10, 40, 60);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setText("2");
+        jPanel2.add(jLabel7);
+        jLabel7.setBounds(520, 90, 40, 60);
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(130, 80, 550, 220);
+
+        botonInterrumpir.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        botonInterrumpir.setForeground(new java.awt.Color(51, 51, 51));
+        botonInterrumpir.setText("Interrumpir");
+        botonInterrumpir.setBorder(null);
+        botonInterrumpir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonInterrumpirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botonInterrumpir);
+        botonInterrumpir.setBounds(340, 330, 150, 23);
+
+        botonTerminar.setBackground(new java.awt.Color(253, 231, 231));
+        botonTerminar.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        botonTerminar.setForeground(new java.awt.Color(51, 51, 51));
+        botonTerminar.setText("Terminar Carrera");
+        botonTerminar.setBorder(null);
+        botonTerminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonTerminarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botonTerminar);
+        botonTerminar.setBounds(530, 330, 150, 23);
+
+        botonEmpezar1.setBackground(new java.awt.Color(225, 255, 214));
+        botonEmpezar1.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        botonEmpezar1.setForeground(new java.awt.Color(51, 51, 51));
+        botonEmpezar1.setText("Empezar Carrera");
+        botonEmpezar1.setBorder(null);
+        botonEmpezar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEmpezar1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botonEmpezar1);
+        botonEmpezar1.setBounds(70, 330, 150, 23);
+
+        PanelBaseSemaforo.setBackground(new java.awt.Color(255, 186, 106));
+        PanelBaseSemaforo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 40, true));
+        PanelBaseSemaforo.setForeground(new java.awt.Color(51, 51, 51));
+        PanelBaseSemaforo.setLayout(null);
+
+        LuzRoja.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout LuzRojaLayout = new javax.swing.GroupLayout(LuzRoja);
+        LuzRoja.setLayout(LuzRojaLayout);
+        LuzRojaLayout.setHorizontalGroup(
+            LuzRojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+        LuzRojaLayout.setVerticalGroup(
+            LuzRojaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+
+        PanelBaseSemaforo.add(LuzRoja);
+        LuzRoja.setBounds(20, 20, 30, 30);
+
+        LuzAmarilla.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout LuzAmarillaLayout = new javax.swing.GroupLayout(LuzAmarilla);
+        LuzAmarilla.setLayout(LuzAmarillaLayout);
+        LuzAmarillaLayout.setHorizontalGroup(
+            LuzAmarillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+        LuzAmarillaLayout.setVerticalGroup(
+            LuzAmarillaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+
+        PanelBaseSemaforo.add(LuzAmarilla);
+        LuzAmarilla.setBounds(20, 60, 30, 30);
+
+        LuzVerde.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout LuzVerdeLayout = new javax.swing.GroupLayout(LuzVerde);
+        LuzVerde.setLayout(LuzVerdeLayout);
+        LuzVerdeLayout.setHorizontalGroup(
+            LuzVerdeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+        LuzVerdeLayout.setVerticalGroup(
+            LuzVerdeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+
+        PanelBaseSemaforo.add(LuzVerde);
+        LuzVerde.setBounds(20, 100, 30, 30);
+
+        jPanel1.add(PanelBaseSemaforo);
+        PanelBaseSemaforo.setBounds(30, 100, 70, 150);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 715, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Carrera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Carrera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Carrera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Carrera.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void botonInterrumpirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInterrumpirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonInterrumpirActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Carrera().setVisible(true);
-            }
-        });
-    }
+    private void botonTerminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTerminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonTerminarActionPerformed
+
+    private void botonEmpezar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEmpezar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonEmpezar1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Caballo1;
+    private javax.swing.JLabel Caballo2;
+    private javax.swing.JLabel Caballo3;
+    private javax.swing.JPanel LuzAmarilla;
+    private javax.swing.JPanel LuzRoja;
+    private javax.swing.JPanel LuzVerde;
+    private javax.swing.JPanel PanelBaseSemaforo;
+    private javax.swing.JLabel Titulo;
+    public javax.swing.JToggleButton botonEmpezar1;
+    public javax.swing.JToggleButton botonInterrumpir;
+    public javax.swing.JButton botonSalir;
+    public javax.swing.JToggleButton botonTerminar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
