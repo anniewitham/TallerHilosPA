@@ -36,7 +36,8 @@ public class Nombres extends javax.swing.JFrame {
         botonSalir = new javax.swing.JButton();
         textNombre2 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        botonAgregarCaballo = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        textNombre3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -83,7 +84,7 @@ public class Nombres extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonContinuar);
-        botonContinuar.setBounds(50, 240, 140, 30);
+        botonContinuar.setBounds(150, 300, 140, 30);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Medalla1.png"))); // NOI18N
         jPanel1.add(jLabel6);
@@ -107,22 +108,25 @@ public class Nombres extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel7.setText("Nombre 2");
+        jLabel7.setText("Nombre 3");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(50, 160, 59, 15);
+        jLabel7.setBounds(50, 220, 59, 15);
 
-        botonAgregarCaballo.setBackground(new java.awt.Color(253, 165, 67));
-        botonAgregarCaballo.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        botonAgregarCaballo.setForeground(new java.awt.Color(51, 51, 51));
-        botonAgregarCaballo.setText("Agregar Caballo");
-        botonAgregarCaballo.setBorder(null);
-        botonAgregarCaballo.addActionListener(new java.awt.event.ActionListener() {
+        jLabel8.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel8.setText("Nombre 2");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(50, 160, 59, 15);
+
+        textNombre3.setBackground(new java.awt.Color(255, 217, 174));
+        textNombre3.setBorder(null);
+        textNombre3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregarCaballoActionPerformed(evt);
+                textNombre3ActionPerformed(evt);
             }
         });
-        jPanel1.add(botonAgregarCaballo);
-        botonAgregarCaballo.setBounds(240, 240, 140, 30);
+        jPanel1.add(textNombre3);
+        textNombre3.setBounds(40, 240, 250, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,7 +136,9 @@ public class Nombres extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -150,14 +156,13 @@ public class Nombres extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textNombre1ActionPerformed
 
-    private void botonAgregarCaballoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarCaballoActionPerformed
+    private void textNombre3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNombre3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregarCaballoActionPerformed
+    }//GEN-LAST:event_textNombre3ActionPerformed
 
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonAgregarCaballo;
     public javax.swing.JButton botonContinuar;
     public javax.swing.JButton botonSalir;
     private javax.swing.JLabel jLabel1;
@@ -165,8 +170,10 @@ public class Nombres extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField textNombre1;
     public javax.swing.JTextField textNombre2;
+    public javax.swing.JTextField textNombre3;
     // End of variables declaration//GEN-END:variables
 }

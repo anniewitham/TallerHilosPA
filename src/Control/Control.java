@@ -1,7 +1,7 @@
 package Control;
 
 import Modelo.Semaforo;
-import Vista.AgregarCaballo;
+
 import Vista.Carrera;
 import Vista.Nombres;
 import Vista.VentanaEmergente;
@@ -15,7 +15,7 @@ public class Control implements ActionListener {
     private Semaforo semaforo;
     private Carrera vistaCarrera;
     private Nombres vistaNombres;
-    private AgregarCaballo vistaAgregarCaballo;
+   
     private VentanaEmergente ventanaEmergente;
 
     public Control() throws IOException {
@@ -29,13 +29,10 @@ public class Control implements ActionListener {
 
         vistaNombres = new Nombres(this);
         vistaNombres.botonContinuar.addActionListener(this);
-        vistaNombres.botonAgregarCaballo.addActionListener(this);
+   
         vistaNombres.botonSalir.addActionListener(this);
         
-        vistaAgregarCaballo = new AgregarCaballo(this);
-        vistaAgregarCaballo.botonSalir.addActionListener(this);
-        vistaAgregarCaballo.botonAgregar.addActionListener(this);
-
+       
     }
 
     @Override

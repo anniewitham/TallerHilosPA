@@ -39,6 +39,8 @@ public class Carrera extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        Caballo3 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         botonInterrumpir = new javax.swing.JToggleButton();
         botonTerminar = new javax.swing.JToggleButton();
         botonEmpezar1 = new javax.swing.JToggleButton();
@@ -99,12 +101,22 @@ public class Carrera extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel7.setText("2");
+        jLabel7.setText("3");
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(520, 90, 40, 60);
+        jLabel7.setBounds(520, 150, 40, 60);
+
+        Caballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/animal-3629_128.gif"))); // NOI18N
+        jPanel2.add(Caballo3);
+        Caballo3.setBounds(420, 160, 93, 50);
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("2");
+        jPanel2.add(jLabel8);
+        jLabel8.setBounds(520, 90, 40, 60);
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(130, 80, 550, 150);
+        jPanel2.setBounds(130, 80, 550, 220);
 
         botonInterrumpir.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         botonInterrumpir.setForeground(new java.awt.Color(51, 51, 51));
@@ -116,7 +128,7 @@ public class Carrera extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonInterrumpir);
-        botonInterrumpir.setBounds(300, 270, 150, 30);
+        botonInterrumpir.setBounds(300, 340, 150, 30);
 
         botonTerminar.setBackground(new java.awt.Color(253, 231, 231));
         botonTerminar.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
@@ -129,7 +141,7 @@ public class Carrera extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonTerminar);
-        botonTerminar.setBounds(500, 270, 150, 30);
+        botonTerminar.setBounds(500, 340, 150, 30);
 
         botonEmpezar1.setBackground(new java.awt.Color(225, 255, 214));
         botonEmpezar1.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
@@ -142,7 +154,7 @@ public class Carrera extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonEmpezar1);
-        botonEmpezar1.setBounds(100, 270, 150, 30);
+        botonEmpezar1.setBounds(100, 340, 150, 30);
 
         PanelBaseSemaforo.setBackground(new java.awt.Color(255, 186, 106));
         PanelBaseSemaforo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 40, true));
@@ -210,7 +222,9 @@ public class Carrera extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -232,6 +246,7 @@ public class Carrera extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Caballo1;
     private javax.swing.JLabel Caballo2;
+    private javax.swing.JLabel Caballo3;
     private javax.swing.JPanel LuzAmarilla;
     private javax.swing.JPanel LuzRoja;
     private javax.swing.JPanel LuzVerde;
@@ -247,6 +262,7 @@ public class Carrera extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
