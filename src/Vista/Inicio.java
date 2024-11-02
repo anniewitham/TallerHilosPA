@@ -3,14 +3,14 @@ package Vista;
 
 import Control.Control;
 
-public class Nombres extends javax.swing.JFrame {
+public class Inicio extends javax.swing.JFrame {
 
     private Control control;
 
     /**
      * Creates new form Nombres
      */
-    public Nombres(Control aThis) {
+    public Inicio(Control aThis) {
         initComponents();
         setLocationRelativeTo(null);
         control = aThis;
@@ -28,15 +28,11 @@ public class Nombres extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         textNombre1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         botonContinuar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         botonSalir = new javax.swing.JButton();
-        textNombre2 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        botonAgregarCaballo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -49,13 +45,7 @@ public class Nombres extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setText("Carrera de Caballos");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(110, 10, 250, 29);
-
-        jLabel2.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText("Nombre 1");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(50, 100, 59, 15);
+        jLabel1.setBounds(90, 30, 250, 29);
 
         textNombre1.setBackground(new java.awt.Color(255, 217, 174));
         textNombre1.setBorder(null);
@@ -65,13 +55,13 @@ public class Nombres extends javax.swing.JFrame {
             }
         });
         jPanel1.add(textNombre1);
-        textNombre1.setBounds(40, 120, 250, 30);
+        textNombre1.setBounds(50, 120, 250, 30);
 
         jLabel4.setFont(new java.awt.Font("Lucida Sans", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("Ingrese los nombres de los caballos:");
+        jLabel4.setText("Ingrese la cantidad de caballos a competir:");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(50, 70, 250, 17);
+        jLabel4.setBounds(20, 90, 300, 17);
 
         botonContinuar.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
         botonContinuar.setForeground(new java.awt.Color(51, 51, 51));
@@ -83,46 +73,17 @@ public class Nombres extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonContinuar);
-        botonContinuar.setBounds(50, 240, 140, 30);
+        botonContinuar.setBounds(130, 180, 140, 30);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Medalla1.png"))); // NOI18N
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(310, 80, 120, 160);
+        jLabel6.setBounds(310, 50, 120, 160);
 
         botonSalir.setBackground(new java.awt.Color(255, 186, 106));
         botonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/salir.png"))); // NOI18N
         botonSalir.setBorder(null);
         jPanel1.add(botonSalir);
         botonSalir.setBounds(410, 10, 30, 30);
-
-        textNombre2.setBackground(new java.awt.Color(255, 217, 174));
-        textNombre2.setBorder(null);
-        textNombre2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textNombre2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(textNombre2);
-        textNombre2.setBounds(40, 180, 250, 30);
-
-        jLabel7.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel7.setText("Nombre 2");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(50, 160, 59, 15);
-
-        botonAgregarCaballo.setBackground(new java.awt.Color(253, 165, 67));
-        botonAgregarCaballo.setFont(new java.awt.Font("Lucida Sans", 0, 12)); // NOI18N
-        botonAgregarCaballo.setForeground(new java.awt.Color(51, 51, 51));
-        botonAgregarCaballo.setText("Agregar Caballo");
-        botonAgregarCaballo.setBorder(null);
-        botonAgregarCaballo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregarCaballoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(botonAgregarCaballo);
-        botonAgregarCaballo.setBounds(240, 240, 140, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,7 +93,7 @@ public class Nombres extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
         );
 
         pack();
@@ -142,31 +103,19 @@ public class Nombres extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonContinuarActionPerformed
 
-    private void textNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNombre2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textNombre2ActionPerformed
-
     private void textNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNombre1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textNombre1ActionPerformed
 
-    private void botonAgregarCaballoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarCaballoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonAgregarCaballoActionPerformed
-
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton botonAgregarCaballo;
     public javax.swing.JButton botonContinuar;
     public javax.swing.JButton botonSalir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField textNombre1;
-    public javax.swing.JTextField textNombre2;
     // End of variables declaration//GEN-END:variables
 }
