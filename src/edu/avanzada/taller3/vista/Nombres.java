@@ -1,20 +1,19 @@
 
-package Vista;
+package edu.avanzada.taller3.vista;
 
-import Control.Control;
+import edu.avanzada.taller3.control.ControlPrincipal;
 
 public class Nombres extends javax.swing.JFrame {
 
-    private Control control;
+    private ControlPrincipal control;
 
     /**
      * Creates new form Nombres
      */
-    public Nombres(Control aThis) {
+    public Nombres(ControlPrincipal aThis) {
         initComponents();
         setLocationRelativeTo(null);
         control = aThis;
-        setVisible(true);
     }
 
     /**
@@ -86,12 +85,12 @@ public class Nombres extends javax.swing.JFrame {
         jPanel1.add(botonContinuar);
         botonContinuar.setBounds(150, 300, 140, 30);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Medalla1.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/Medalla1.png"))); // NOI18N
         jPanel1.add(jLabel6);
         jLabel6.setBounds(310, 80, 120, 160);
 
         botonSalir.setBackground(new java.awt.Color(255, 186, 106));
-        botonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/salir.png"))); // NOI18N
+        botonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/salir.png"))); // NOI18N
         botonSalir.setBorder(null);
         jPanel1.add(botonSalir);
         botonSalir.setBounds(410, 10, 30, 30);

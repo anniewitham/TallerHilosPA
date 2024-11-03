@@ -1,18 +1,17 @@
-package Vista;
+package edu.avanzada.taller3.vista;
 
-import Control.Control;
+import edu.avanzada.taller3.control.ControlPrincipal;
 
 public class Carrera extends javax.swing.JFrame {
 
-    private Control control;
+    private ControlPrincipal control;
 
     /**
      * Creates new form Carrera
      */
-    public Carrera(Control aThis) {
+    public Carrera(ControlPrincipal aThis) {
         initComponents();
         setLocationRelativeTo(null);
-        setVisible(true);
     }
 
     //https://www.youtube.com/watch?v=0El2Flipf5k -- SEMAFORO
@@ -65,7 +64,7 @@ public class Carrera extends javax.swing.JFrame {
         Titulo.setBounds(240, 20, 310, 33);
 
         botonSalir.setBackground(new java.awt.Color(255, 186, 106));
-        botonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/salir.png"))); // NOI18N
+        botonSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/salir.png"))); // NOI18N
         botonSalir.setBorder(null);
         jPanel1.add(botonSalir);
         botonSalir.setBounds(650, 20, 30, 30);
@@ -73,15 +72,15 @@ public class Carrera extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(252, 251, 249));
         jPanel2.setLayout(null);
 
-        Caballo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/animal-3629_128.gif"))); // NOI18N
+        Caballo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/animal-3629_128.gif"))); // NOI18N
         jPanel2.add(Caballo2);
         Caballo2.setBounds(420, 90, 93, 50);
 
-        Caballo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/animal-3629_128.gif"))); // NOI18N
+        Caballo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/animal-3629_128.gif"))); // NOI18N
         jPanel2.add(Caballo1);
         Caballo1.setBounds(420, 10, 93, 50);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/Meta.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/Meta.png"))); // NOI18N
         jPanel2.add(jLabel3);
         jLabel3.setBounds(40, 0, 40, 220);
 
@@ -105,7 +104,7 @@ public class Carrera extends javax.swing.JFrame {
         jPanel2.add(jLabel7);
         jLabel7.setBounds(520, 150, 40, 60);
 
-        Caballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/Imagenes/animal-3629_128.gif"))); // NOI18N
+        Caballo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/animal-3629_128.gif"))); // NOI18N
         jPanel2.add(Caballo3);
         Caballo3.setBounds(420, 160, 93, 50);
 
@@ -247,9 +246,9 @@ public class Carrera extends javax.swing.JFrame {
     private javax.swing.JLabel Caballo1;
     private javax.swing.JLabel Caballo2;
     private javax.swing.JLabel Caballo3;
-    private javax.swing.JPanel LuzAmarilla;
-    private javax.swing.JPanel LuzRoja;
-    private javax.swing.JPanel LuzVerde;
+    public javax.swing.JPanel LuzAmarilla;
+    public javax.swing.JPanel LuzRoja;
+    public javax.swing.JPanel LuzVerde;
     private javax.swing.JPanel PanelBaseSemaforo;
     private javax.swing.JLabel Titulo;
     public javax.swing.JToggleButton botonEmpezar1;

@@ -1,29 +1,17 @@
-package Control;
+package edu.avanzada.taller3.control;
 
-import Modelo.Caballo;
+import edu.avanzada.taller3.modelo.Caballo;
 
-public class ControlCaballo implements Runnable {
+public class CaballoThread extends Thread {
     private Caballo caballo;
-    private boolean carreraEnCurso;
-    private Runnable callback;  // Callback para informar al controlador principal sobre el cambio de posición
 
-    public ControlCaballo(Caballo caballo, Runnable callback) {
-        this.caballo = caballo;
-        this.callback = callback;
-        this.carreraEnCurso = true;
-    }
-
-    public void iniciarCarrera() {
-        new Thread(this).start();
-    }
-
-    public void detenerCarrera() {
-        this.carreraEnCurso = false;
+    public CaballoThread(String nombre, int y) {
+        this.caballo = new Caballo(nombre, y);
     }
 
     @Override
     public void run() {
-        while (carreraEnCurso && caballo.getPosicion() < 100) { 
+        /**while (!(caballo.isGanador())) { 
             try {
                 // Tiempo de espera aleatorio para cada movimiento
                 int tiempoEspera = (int) (Math.random() * 800 + 200); // Espera entre 200 y 1000 ms
@@ -40,7 +28,7 @@ public class ControlCaballo implements Runnable {
             } catch (InterruptedException e) {
                 detenerCarrera(); // Finaliza el hilo en caso de interrupción
             }
-        }
+        }**/
     }
 }
 

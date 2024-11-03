@@ -1,4 +1,4 @@
-package Modelo;
+package edu.avanzada.taller3.modelo;
 
 /**
  * La clase Semaforo representa el semaforo que da inicio a la carrera.

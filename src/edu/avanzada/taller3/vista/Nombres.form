@@ -148,7 +148,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/Medalla1.png"/>
+              <Image iconType="3" name="/edu/avanzada/taller3/vista/Medalla1.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -163,7 +163,7 @@
               <Color blue="6a" green="ba" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Vista/Imagenes/salir.png"/>
+              <Image iconType="3" name="/edu/avanzada/taller3/vista/salir.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

@@ -1,4 +1,4 @@
-package Vista;
+package edu.avanzada.taller3.vista;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;

@@ -1,4 +1,4 @@
-package Modelo;
+package edu.avanzada.taller3.modelo;
 
 /**
  * La clase Caballo representa un caballo en una carrera, con atributos como nombre, 
@@ -8,10 +8,25 @@ package Modelo;
  */
 public class Caballo {
     private String nombre;
-    private int posicion;
+    private int x;
+    private int y;
     private int victorias;
     private boolean interrumpido;
+    private boolean ganador;
 
+    public Caballo(String nombre, int y) {
+        this.nombre = nombre;
+        this.x = 420;
+        this.y = y;
+        this.victorias = 0;
+        this.interrumpido = true;
+        this.ganador = false;
+    }
+
+    public Caballo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
     /**
      * Obtiene el nombre del caballo.
      * 
@@ -30,22 +45,25 @@ public class Caballo {
         this.nombre = nombre;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
     /**
      * Obtiene la posición actual del caballo en la carrera.
      * 
      * @return la posición actual del caballo.
      */
-    public int getPosicion() {
-        return posicion;
-    }
-
-    /**
-     * Establece la posición del caballo en la carrera.
-     * 
-     * @param posicion la posición a asignar al caballo.
-     */
-    public void setPosicion(int posicion) {
-        this.posicion = posicion;
+    public void setY(int y) {
+        this.y = y;
     }
 
     /**
@@ -83,5 +101,15 @@ public class Caballo {
     public void setInterrumpido(boolean interrumpido) {
         this.interrumpido = interrumpido;
     }
+
+    public boolean isGanador() {
+        return ganador;
+    }
+
+    public void setGanador(boolean ganador) {
+        this.ganador = ganador;
+    }
+    
+    
 }
 
