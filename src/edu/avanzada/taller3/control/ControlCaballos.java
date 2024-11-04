@@ -24,13 +24,15 @@ public class ControlCaballos {
 
         for (JTextField nombre : nombres) {
             if (nombre.getText().trim().isEmpty()) {
-                control.ventanaEmergente.ventanaAtención("Por favor, ingresa el nombre de todos los caballos");
+                control.ventanaEmergente.ventanaAtención("Por favor, ingresa el"
+                        + " nombre de todos los caballos");
                 return false;
             }
         }
 
         for (int i = 0; i < nombres.length; i++) {
-            Caballo caballo = new Caballo(nombres[i].getText(), posiciones[i], i+1);
+            Caballo caballo = new Caballo(nombres[i].getText(),posiciones[i],
+                    i+1);
             caballos.add(caballo);
         }
         return true;

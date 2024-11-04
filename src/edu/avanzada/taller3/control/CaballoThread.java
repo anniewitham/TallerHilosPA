@@ -12,8 +12,9 @@ public class CaballoThread extends Thread {
     public CaballoThread(ControlPrincipal control, int numCaballo) {
         this.control = control;
         this.numCaballo = numCaballo;
-        this.caballo = control.controlCaballos.getCaballos().get(numCaballo - 1);
-        control.vistaCarrera.actualizarVistaCaballo(numCaballo, 420, caballo.getY());
+        this.caballo = control.controlCaballos.getCaballos().get(numCaballo-1);
+        control.vistaCarrera.actualizarVistaCaballo(numCaballo,420,
+                caballo.getY());
     }
 
     @Override
@@ -22,11 +23,15 @@ public class CaballoThread extends Thread {
             control.controlSemaforo.join();
             while (!hayGanadorGlobal()) {
                 mover(caballo);
-                SwingUtilities.invokeLater(() -> control.vistaCarrera.actualizarVistaCaballo(numCaballo, caballo.getX(), caballo.getY()));
+                SwingUtilities.invokeLater(() -> control.vistaCarrera.
+                        actualizarVistaCaballo(numCaballo, caballo.getX(),
+                                caballo.getY()));
                 if (caballo.getX() <= 30 && marcarGanadorGlobal()) {
                     control.setHayCarrera(false);
                     caballo.setVictorias(caballo.getVictorias() + 1);
-                    control.ventanaEmergente.ventanaGanador("¡El caballo número "+caballo.getPosicion()+" ("+caballo.getNombre()+") ha ganado la carrera!");
+                    control.ventanaEmergente.ventanaGanador("¡El caballo número"
+                            + " "+caballo.getPosicion()+" ("+caballo.getNombre()
+                            +") ha ganado la carrera!");
                 }
                 Thread.sleep((long) (Math.random() * 2000 + 1));
             }
