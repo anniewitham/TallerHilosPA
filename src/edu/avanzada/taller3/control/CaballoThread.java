@@ -39,7 +39,7 @@ public class CaballoThread extends Thread {
         c.setX(c.getX() - 20);
     }
 
-    public static volatile boolean ganadorGlobal = false;
+    private static volatile boolean ganadorGlobal = false;
 
     public synchronized boolean hayGanadorGlobal() {
         return ganadorGlobal;
