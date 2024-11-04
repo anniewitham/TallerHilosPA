@@ -13,7 +13,6 @@ public class Caballo {
     private int y;
     private int victorias;
     private boolean interrumpido;
-    private boolean ganador;
     private int posicion;
 
     public Caballo(String nombre, int y, int posicion) {
@@ -21,8 +20,7 @@ public class Caballo {
         this.x = 420;
         this.y = y;
         this.victorias = 0;
-        this.interrumpido = true;
-        this.ganador = false;
+        this.interrumpido = false;
         this.posicion = posicion;
     }
 
@@ -113,13 +111,4 @@ public class Caballo {
     public void setInterrumpido(boolean interrumpido) {
         this.interrumpido = interrumpido;
     }
-
-    public boolean isGanador() {
-        return ganador;
-    }
-
-    public void setGanador(boolean ganador) {
-        this.ganador = ganador;
-    }
-
 }

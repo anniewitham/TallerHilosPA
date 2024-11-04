@@ -14,7 +14,6 @@ public class CaballoThread extends Thread {
         this.numCaballo = numCaballo;
         this.caballo = control.controlCaballos.getCaballos().get(numCaballo - 1);
         control.vistaCarrera.actualizarVistaCaballo(numCaballo, 420, caballo.getY());
-        reiniciarCarrera();
     }
 
     @Override
@@ -25,6 +24,7 @@ public class CaballoThread extends Thread {
                 mover(caballo);
                 SwingUtilities.invokeLater(() -> control.vistaCarrera.actualizarVistaCaballo(numCaballo, caballo.getX(), caballo.getY()));
                 if (caballo.getX() <= 30 && marcarGanadorGlobal()) {
+                    control.setHayCarrera(false);
                     caballo.setVictorias(caballo.getVictorias() + 1);
                     control.ventanaEmergente.ventanaGanador("¡El caballo número "+caballo.getPosicion()+" ("+caballo.getNombre()+") ha ganado la carrera!");
                 }
