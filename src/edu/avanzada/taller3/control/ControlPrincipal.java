@@ -47,14 +47,14 @@ public class ControlPrincipal implements ActionListener {
         ventanaEmergente = new VentanaEmergente(); // Crea la ventana para mensajes emergentes
 
         // Inicializa la vista de la carrera y los botones
-        vistaCarrera = new Carrera(this);
+        vistaCarrera = new Carrera();
         vistaCarrera.botonEmpezar1.addActionListener(this);
         vistaCarrera.botonInterrumpir.addActionListener(this);
         vistaCarrera.botonSalir.addActionListener(this);
         vistaCarrera.botonSalir.setActionCommand("Salir");
 
         // Inicializa la vista de nombres y sus botones
-        vistaNombres = new Nombres(this);
+        vistaNombres = new Nombres();
         vistaNombres.botonContinuar.addActionListener(this);
         vistaNombres.botonSalir.addActionListener(this);
         vistaNombres.botonSalir.setActionCommand("Salir");

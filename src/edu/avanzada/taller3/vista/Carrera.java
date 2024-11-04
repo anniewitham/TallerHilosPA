@@ -1,10 +1,8 @@
 package edu.avanzada.taller3.vista;
 
-import edu.avanzada.taller3.control.ControlPrincipal;
-
 public class Carrera extends javax.swing.JFrame {
     
-    public Carrera(ControlPrincipal aThis) {
+    public Carrera() {
         initComponents();
         setLocationRelativeTo(null);
     }

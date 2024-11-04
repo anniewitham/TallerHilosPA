@@ -24,10 +24,6 @@ public class Caballo {
         this.posicion = posicion;
     }
 
-    public Caballo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     /**
      * Obtiene el nombre del caballo.
      *
