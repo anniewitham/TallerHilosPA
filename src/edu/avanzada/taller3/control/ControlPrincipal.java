@@ -16,6 +16,8 @@ import java.util.ArrayList;
  * (Modelo-Vista-Controlador). Se encarga de gestionar la interacción entre las
  * vistas (Carrera y Nombres), los hilos que representan a los caballos en la
  * carrera, y el semáforo que controla el inicio de la carrera.
+ * 
+ * @author Ana Quientero, Juan Avila, Samuel Barrera
  */
 public class ControlPrincipal implements ActionListener {
 
