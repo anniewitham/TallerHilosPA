@@ -1,34 +1,59 @@
 package edu.avanzada.taller3.control;
 
 import edu.avanzada.taller3.modelo.Caballo;
+import javax.swing.SwingUtilities;
 
 public class CaballoThread extends Thread {
-    private Caballo caballo;
 
-    public CaballoThread(String nombre, int y) {
-        this.caballo = new Caballo(nombre, y);
+    private Caballo caballo;
+    private ControlPrincipal control;
+    private int numCaballo;
+
+    public CaballoThread(ControlPrincipal control, int numCaballo) {
+        this.control = control;
+        this.numCaballo = numCaballo;
+        this.caballo = control.controlCaballos.getCaballos().get(numCaballo - 1);
+        control.vistaCarrera.actualizarVistaCaballo(numCaballo, 420, caballo.getY());
+        reiniciarCarrera();
     }
 
     @Override
     public void run() {
-        /**while (!(caballo.isGanador())) { 
-            try {
-                // Tiempo de espera aleatorio para cada movimiento
-                int tiempoEspera = (int) (Math.random() * 800 + 200); // Espera entre 200 y 1000 ms
-                Thread.sleep(tiempoEspera);
-
-                // Avanza el caballo una posición y llama al callback para notificar del cambio
-                caballo.setPosicion(caballo.getPosicion() + 1);
-                callback.run();
-
-                // Si el caballo llega a la meta, se detiene
-                if (caballo.getPosicion() >= 100) {
-                    detenerCarrera();
+        try {
+            control.controlSemaforo.join();
+            while (!hayGanadorGlobal()) {
+                mover(caballo);
+                SwingUtilities.invokeLater(() -> control.vistaCarrera.actualizarVistaCaballo(numCaballo, caballo.getX(), caballo.getY()));
+                if (caballo.getX() <= 30 && marcarGanadorGlobal()) {
+                    caballo.setVictorias(caballo.getVictorias() + 1);
+                    control.ventanaEmergente.ventanaGanador("¡El caballo número "+caballo.getPosicion()+" ("+caballo.getNombre()+") ha ganado la carrera!");
                 }
-            } catch (InterruptedException e) {
-                detenerCarrera(); // Finaliza el hilo en caso de interrupción
+                Thread.sleep((long) (Math.random() * 2000 + 1));
             }
-        }**/
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    public synchronized void mover(Caballo c) {
+        c.setX(c.getX() - 20);
+    }
+
+    public static volatile boolean ganadorGlobal = false;
+
+    public synchronized boolean hayGanadorGlobal() {
+        return ganadorGlobal;
+    }
+
+    public synchronized boolean marcarGanadorGlobal() {
+        if (!ganadorGlobal) {
+            ganadorGlobal = true;
+            return true;
+        }
+        return false;
+    }
+
+    public static synchronized void reiniciarCarrera() {
+        ganadorGlobal = false;
     }
 }
-

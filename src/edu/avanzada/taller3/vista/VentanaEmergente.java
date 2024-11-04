@@ -16,12 +16,12 @@ public class VentanaEmergente {
 
     
     public void ventanaGanador(String mensaje) {
-        Icon o = new ImageIcon(getClass().getResource("/Vista.Imagenes/ganador.png"));
+        Icon o = new ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/ganador.png"));
         JOptionPane.showMessageDialog(null, mensaje, "Ganador ", JOptionPane.PLAIN_MESSAGE, o);
     }
     
-    public void ventanaInformativa(String mensaje) {
-         Icon o = new ImageIcon(getClass().getResource("/Vista.Imagenes/jinete.png"));
+    /**public void ventanaInformativa(String mensaje) {
+         Icon o = new ImageIcon(getClass().getResource("/edu/avanzada/taller3/vista/jinete.png"));
         JOptionPane.showMessageDialog(null, mensaje, "Conteo Carreras ", JOptionPane.PLAIN_MESSAGE, o);
-    }
+    }*/
 }

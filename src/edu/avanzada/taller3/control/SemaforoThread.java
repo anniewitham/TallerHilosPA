@@ -16,7 +16,7 @@ public class SemaforoThread extends Thread {
     @Override
     public void run() {
         actualizarSemaforo("reiniciar");
-        System.out.println("corriendo");
+        
         while (semaforo.getEstado() != "verde") {
             try {
                 actualizarSemaforo("rojo");

@@ -1,19 +1,24 @@
 package edu.avanzada.taller3.control;
 
+import edu.avanzada.taller3.modelo.Caballo;
 import edu.avanzada.taller3.vista.Carrera;
 import edu.avanzada.taller3.vista.Nombres;
 import edu.avanzada.taller3.vista.VentanaEmergente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import javax.crypto.Mac;
 
 public class ControlPrincipal implements ActionListener {
 
     protected Carrera vistaCarrera;
     protected Nombres vistaNombres;
-    private SemaforoThread controlSemaforo;
+    protected SemaforoThread controlSemaforo;
     protected VentanaEmergente ventanaEmergente;
-    private ControlCaballos controlCaballos;
+    protected ControlCaballos controlCaballos;
+    private CaballoThread caballo1;
+    private CaballoThread caballo2;
+    private CaballoThread caballo3;
 
     public ControlPrincipal() throws IOException {
         ventanaEmergente = new VentanaEmergente();
@@ -38,11 +43,19 @@ public class ControlPrincipal implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Salir":
+                mostrarCaballoGanador();
                 System.exit(0);
                 break;
             case "Empezar Carrera":
+                reiniciarPosiciones();
                 controlSemaforo = new SemaforoThread(this);
                 controlSemaforo.start();
+                caballo1 = new CaballoThread(this, 1);
+                caballo2 = new CaballoThread(this, 2);
+                caballo3 = new CaballoThread(this, 3);
+                caballo1.start();
+                caballo2.start();
+                caballo3.start();
                 break;
             case "Continuar":
                 if (controlCaballos.agregarCaballo()) {
@@ -52,4 +65,25 @@ public class ControlPrincipal implements ActionListener {
                 break;
         }
     }
+
+    public void mostrarCaballoGanador() {
+        Caballo caballoGanador = null;
+        int maxVictorias = 0;
+
+        for (Caballo caballo : controlCaballos.getCaballos()) {
+            if (caballo.getVictorias() > maxVictorias) {
+                maxVictorias = caballo.getVictorias();
+                caballoGanador = caballo;
+            }
+        }
+        ventanaEmergente.ventanaGanador("¡El caballo número "+caballoGanador.getPosicion()+"("+caballoGanador.getNombre()+") fue el que obtuvo mas vitorias ("+maxVictorias+")!");
+    }
+
+    public void reiniciarPosiciones() {
+        for (Caballo caballo : controlCaballos.getCaballos()) {
+            caballo.setX(420);
+        }
+        CaballoThread.reiniciarCarrera();
+    }
+
 }

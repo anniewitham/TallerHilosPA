@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import javax.swing.JTextField;
 
 public class ControlCaballos {
-
     private ArrayList<Caballo> caballos;
     private ControlPrincipal control;
 
@@ -31,7 +30,7 @@ public class ControlCaballos {
         }
 
         for (int i = 0; i < nombres.length; i++) {
-            Caballo caballo = new Caballo(nombres[i].getText(), posiciones[i]);
+            Caballo caballo = new Caballo(nombres[i].getText(), posiciones[i], i+1);
             caballos.add(caballo);
         }
         return true;
@@ -43,5 +42,6 @@ public class ControlCaballos {
 
     public void setCaballos(ArrayList<Caballo> caballos) {
         this.caballos = caballos;
+        
     }
 }
